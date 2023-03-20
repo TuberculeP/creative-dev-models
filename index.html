@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - MediaPipe - Selfie Segmentation</title>
+    <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation@0.1/selfie_segmentation.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        canvas{
+            filter: blur(5px) contrast(10);
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+    <h1 contenteditable="true">RIP</h1>
+
+    <button id="capture">Capture crappy version</button>
+
+    <video class="input_video"></video>
+    <div class="canvas-container">
+    <canvas class="output_canvas" width="1280px" height="720px">
+    </canvas>
+    </div>
+    <div class="loading">
+      <div class="spinner"></div>
+      <div class="message">
+        Chargement
+      </div>
+    </div>
+
+  </div>
+  <div class="control-panel segmentation"></div>
+  <div class="control-panel face-mesh"></div>
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
